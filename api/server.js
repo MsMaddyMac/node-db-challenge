@@ -2,6 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 
 const projectsRouter = require('../businessProjects/routers/projects-router');
+const resourcesRouter = require('../businessProjects/routers/resources-router');
 
 const server = express();
 
@@ -21,5 +22,6 @@ server.use(express.json());
 server.use(logger);
 
 server.use('/api/projects', projectsRouter);
+server.use('/api/resources', resourcesRouter);
 
 module.exports = server;
