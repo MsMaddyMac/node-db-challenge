@@ -19,5 +19,18 @@ router.get('/', (req, res) => {
     });
 });
 
+router.post('/', (req, res) => {
+    Resources.add(req.body)
+    .then(resource => {
+        res.status(201).json(resource);
+    })
+    .catch(err => {
+        console.log('Could not add resource', err);
+        res.status(500).json({
+            error: 'Error adding resource.'
+        });
+    });
+});
+
 
 module.exports = router;
