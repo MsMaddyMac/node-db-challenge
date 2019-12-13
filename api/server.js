@@ -3,6 +3,7 @@ const helmet = require('helmet');
 
 const projectsRouter = require('../businessProjects/routers/projects-router');
 const resourcesRouter = require('../businessProjects/routers/resources-router');
+const tasksRouter = require('../businessProjects/routers/tasks-router');
 
 const server = express();
 
@@ -23,5 +24,6 @@ server.use(logger);
 
 server.use('/api/projects', projectsRouter);
 server.use('/api/resources', resourcesRouter);
+server.use('/api/tasks', tasksRouter);
 
 module.exports = server;
