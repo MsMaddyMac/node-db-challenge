@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+  Relational databases store info in a table by rows and columns. SQ is a database management system. It will allow you to interact with your relational database (or any type of database) by use of SQL. DBMS’s allow you to manipulate the data stored in your database. SQL is the standard language used to interact the DMBS’s.
+
 - [ ] Why do tables need a `primary key`?
+
+   It makes the values stored in a row unique and easily accessible.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+    Foreign key.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+   Shared information across multiple tables which use foreign keys to connect to primary keys in order to reference the info.
 
 ## Minimum Viable Product
 
