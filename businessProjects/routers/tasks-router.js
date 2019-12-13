@@ -18,4 +18,18 @@ router.get('/', (req, res) => {
     });
 });
 
+// Endpoint to POST new task
+router.post('/', (req, res) => {
+    const taskData = req.body;
+
+    Tasks.add(taskData)
+    .then(task => {
+        res.status(201).json(task);
+    })
+    .catch(err => {
+        console.log('Error adding new task.', err);
+        res.status(500).json({ error: 'Error adding new task.' })
+    });
+});
+
 module.exports = router;
